@@ -1,0 +1,35 @@
+close all; clear; clc;
+
+t = -3:0.01:3;
+x=1.5*(abs(t)<=2);
+
+FX = ones(size(t));
+for n=1:100
+    an = 3*sin(2*n*pi/3)/(n*pi);
+    FX = FX+an*cos(n*pi*t/3); 
+end
+
+plot(t,x,'.g',t,FX,'k');
+
+%%
+close all; clear; clc;
+
+t=-4:0.01:4;
+x=(-1*(abs(t)>2))+(2-abs(t)).*(abs(t)<=2);
+
+FX=zeros(size(t));
+for n=1:1000
+    an = 2*sin(n*pi/2)/(n*pi)-8*(cos(n*pi/2)-1)/(n^2*pi^2);
+    FX = FX + an*cos(n*pi*t/4);
+end
+
+plot(t,x,'.g',t,FX,'k');
+
+%%
+close all; clear; clc;
+
+t = 0:0.01:8;
+x = (t>=2 & t<4) + 2*(t>=4 & t <
+
+
+
